@@ -11,3 +11,15 @@ build = ["sh", "-c", "cd project && npm run build"]
 [[ports]]
 localPort = 5000
 externalPort = 80
+
+[workflows]
+runButton = "Development"
+
+[[workflows.workflow]]
+name = "Development"
+author = 46678806
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd project && npm install && npm run dev"

@@ -4,38 +4,36 @@ import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 
 const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear();
-
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div>
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-xl">KTL</span>
+          <div className="lg:col-span-1">
+            <div className="flex items-center mb-6">
+              <div className="bg-primary text-white p-3 rounded-lg mr-3">
+                <span className="font-heading font-bold text-xl">KTL</span>
               </div>
               <div>
-                <h3 className="font-heading text-xl font-bold">Kattali Textile Ltd</h3>
-                <p className="text-sm text-gray-400">Quality Since 1995</p>
+                <h3 className="font-heading font-bold text-xl">Kattali Textile</h3>
+                <p className="text-sm text-gray-400">Premium Textiles</p>
               </div>
             </div>
-            <p className="text-gray-300 leading-relaxed mb-4">
-              Leading textile manufacturer in Bangladesh, committed to quality, 
-              sustainability, and innovation in textile production.
+            <p className="text-gray-300 mb-6 leading-relaxed">
+              Leading textile manufacturer in Bangladesh, delivering premium quality 
+              textiles to global markets since 2004.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-primary transition-colors">
+              <a href="#" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors duration-200">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-primary transition-colors">
+              <a href="#" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors duration-200">
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-primary transition-colors">
+              <a href="#" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors duration-200">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-primary transition-colors">
+              <a href="#" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors duration-200">
                 <Instagram className="w-5 h-5" />
               </a>
             </div>
@@ -43,58 +41,98 @@ const Footer: React.FC = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-heading text-lg font-semibold mb-6">Quick Links</h4>
+            <h4 className="font-heading font-bold text-lg mb-6">Quick Links</h4>
             <ul className="space-y-3">
-              <li><Link to="/about" className="text-gray-300 hover:text-primary transition-colors">About Us</Link></li>
-              <li><Link to="/products" className="text-gray-300 hover:text-primary transition-colors">Products</Link></li>
-              <li><Link to="/manufacturing" className="text-gray-300 hover:text-primary transition-colors">Manufacturing</Link></li>
-              <li><Link to="/sustainability" className="text-gray-300 hover:text-primary transition-colors">Sustainability</Link></li>
-              <li><Link to="/gallery" className="text-gray-300 hover:text-primary transition-colors">Gallery</Link></li>
-              <li><Link to="/contact" className="text-gray-300 hover:text-primary transition-colors">Contact</Link></li>
+              <li>
+                <Link to="/" className="text-gray-300 hover:text-white transition-colors duration-200">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" className="text-gray-300 hover:text-white transition-colors duration-200">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/products" className="text-gray-300 hover:text-white transition-colors duration-200">
+                  Products
+                </Link>
+              </li>
+              <li>
+                <Link to="/manufacturing" className="text-gray-300 hover:text-white transition-colors duration-200">
+                  Manufacturing
+                </Link>
+              </li>
+              <li>
+                <Link to="/sustainability" className="text-gray-300 hover:text-white transition-colors duration-200">
+                  Sustainability
+                </Link>
+              </li>
             </ul>
           </div>
 
           {/* Services */}
           <div>
-            <h4 className="font-heading text-lg font-semibold mb-6">Our Services</h4>
+            <h4 className="font-heading font-bold text-lg mb-6">Services</h4>
             <ul className="space-y-3">
-              <li><span className="text-gray-300">Fabric Manufacturing</span></li>
-              <li><span className="text-gray-300">Garment Production</span></li>
-              <li><span className="text-gray-300">Quality Control</span></li>
-              <li><span className="text-gray-300">Custom Orders</span></li>
-              <li><span className="text-gray-300">Export Services</span></li>
-              <li><span className="text-gray-300">Consultation</span></li>
+              <li>
+                <Link to="/stocks" className="text-gray-300 hover:text-white transition-colors duration-200">
+                  Stock Market Data
+                </Link>
+              </li>
+              <li>
+                <Link to="/gallery" className="text-gray-300 hover:text-white transition-colors duration-200">
+                  Gallery
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-gray-300 hover:text-white transition-colors duration-200">
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h4 className="font-heading text-lg font-semibold mb-6">Contact Info</h4>
+            <h4 className="font-heading font-bold text-lg mb-6">Contact Info</h4>
             <div className="space-y-4">
-              <div className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                <div>
-                  <p className="text-gray-300">House 123, Road 45</p>
-                  <p className="text-gray-300">Gulshan-2, Dhaka-1212</p>
-                  <p className="text-gray-300">Bangladesh</p>
-                </div>
+              <div className="flex items-start">
+                <MapPin className="w-5 h-5 text-primary mr-3 mt-1 flex-shrink-0" />
+                <p className="text-gray-300 text-sm">
+                  Kattali Industrial Area<br />
+                  Chittagong, Bangladesh
+                </p>
               </div>
-              <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-primary flex-shrink-0" />
-                <span className="text-gray-300">+880-2-9876543</span>
+              <div className="flex items-center">
+                <Phone className="w-5 h-5 text-primary mr-3 flex-shrink-0" />
+                <p className="text-gray-300 text-sm">+880-31-2523179</p>
               </div>
-              <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-primary flex-shrink-0" />
-                <span className="text-gray-300">info@kattali.com</span>
+              <div className="flex items-center">
+                <Mail className="w-5 h-5 text-primary mr-3 flex-shrink-0" />
+                <p className="text-gray-300 text-sm">info@kattalitextile.com</p>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8 text-center">
-          <p className="text-gray-400">
-            © {currentYear} Kattali Textile Ltd. All rights reserved.
-          </p>
+      {/* Bottom Bar */}
+      <div className="border-t border-gray-800">
+        <div className="container mx-auto px-4 py-6">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <p className="text-gray-400 text-sm">
+              © 2024 Kattali Textile Ltd. All rights reserved.
+            </p>
+            <div className="flex space-x-6 mt-4 md:mt-0">
+              <Link to="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">
+                Privacy Policy
+              </Link>
+              <Link to="/terms" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">
+                Terms of Service
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
