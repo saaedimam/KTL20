@@ -1,61 +1,42 @@
-
-const fs = require('fs');
+const express = require('express');
 const path = require('path');
+const fs = require('fs');
 
-const mimeTypes = {
-  '.html': 'text/html',
-  '.css': 'text/css',
-  '.js': 'application/javascript',
-  '.png': 'image/png',
-  '.jpg': 'image/jpeg',
-  '.jpeg': 'image/jpeg',
-  '.gif': 'image/gif',
-  '.svg': 'image/svg+xml',
-  '.ico': 'image/x-icon',
-  '.json': 'application/json',
-};
+const app = express();
+const PORT = process.env.PORT || 5000;
 
-module.exports = (req, res) => {
-  const parsed = new URL(req.url, 'http://localhost');
-  const root = __dirname;
-  let filePath = parsed.pathname === '/' ? 'index.html' : parsed.pathname.replace(/^\/+/,'');
-  filePath = path.join(root, filePath);
+// Serve static files from the project/dist directory after build
+app.use(express.static(path.join(__dirname, 'project', 'dist')));
 
-  // prevent directory traversal
-  if (!path.resolve(filePath).startsWith(root)) {
-    res.statusCode = 403;
-    res.setHeader('Content-Type', 'text/plain');
-    res.end('Forbidden');
-    return;
-  }
-
-  const extname = path.extname(filePath);
-  const contentType = mimeTypes[extname] || 'application/octet-stream';
-
-  fs.readFile(filePath, (err, content) => {
-    if (err) {
-      if (err.code === 'ENOENT') {
-        // File not found, serve index.html for SPA routing
-        fs.readFile(path.join(__dirname, 'index.html'), (err2, content2) => {
-          if (err2) {
-            res.statusCode = 500;
-            res.setHeader('Content-Type', 'text/plain');
-            res.end('Server Error');
-          } else {
-            res.statusCode = 200;
-            res.setHeader('Content-Type', 'text/html');
-            res.end(content2, 'utf-8');
-          }
-        });
-      } else {
-        res.statusCode = 500;
-        res.setHeader('Content-Type', 'text/plain');
-        res.end('Server Error');
-      }
-    } else {
-      res.statusCode = 200;
-      res.setHeader('Content-Type', contentType);
-      res.end(content, 'utf-8');
+// API endpoints for dynamic content
+app.get('/api/news', (req, res) => {
+  res.json([
+    {
+      title: "KTL Achieves GOTS Certification",
+      date: "2024-01-15",
+      excerpt: "Our commitment to organic textile standards recognized globally."
+    },
+    {
+      title: "New Manufacturing Facility Opens",
+      date: "2024-01-10",
+      excerpt: "Expanding capacity with state-of-the-art equipment."
     }
+  ]);
+});
+
+app.get('/api/contact', (req, res) => {
+  res.json({
+    email: "info@kattali.com",
+    phone: "+880-2-123456789",
+    address: "Dhaka, Bangladesh"
   });
-};
+});
+
+// Catch all handler for React Router
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'project', 'dist', 'index.html'));
+});
+
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server running on port ${PORT}`);
+});

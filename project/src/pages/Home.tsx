@@ -1,113 +1,151 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Users, Settings, Calendar, Award, Shirt, Package, Globe } from 'lucide-react';
+import { ArrowRight, Users, Award, Globe, Zap, Shield, Heart } from 'lucide-react';
+import Hero from '../components/Hero';
 
-const Home = () => {
+const Home: React.FC = () => {
+  const features = [
+    {
+      icon: Award,
+      title: "Quality Assured",
+      description: "ISO certified manufacturing with rigorous quality control at every step."
+    },
+    {
+      icon: Globe,
+      title: "Global Reach",
+      description: "Exporting to 50+ countries worldwide with reliable supply chain."
+    },
+    {
+      icon: Zap,
+      title: "Fast Delivery",
+      description: "Efficient production processes ensuring timely delivery of orders."
+    },
+    {
+      icon: Shield,
+      title: "Compliance",
+      description: "Full compliance with international standards and certifications."
+    }
+  ];
+
   const stats = [
-    { icon: Calendar, title: '20+ Years', subtitle: 'of Experience', description: 'Established since 2004' },
-    { icon: Settings, title: '680 Machines', subtitle: 'Advanced Equipment', description: 'State-of-the-art technology' },
-    { icon: Users, title: '1,200+', subtitle: 'Employees', description: 'Skilled workforce' },
-    { icon: Package, title: '360,000', subtitle: 'Dozen Annual Capacity', description: 'High production volume' },
-  ];
-
-  const products = [
-    { name: 'T-Shirts', icon: Shirt, description: 'Premium quality cotton and blended t-shirts' },
-    { name: 'Polo Shirts', icon: Shirt, description: 'Professional polo shirts for all occasions' },
-    { name: 'Bottoms', icon: Package, description: 'Comfortable pants, shorts, and trousers' },
-    { name: 'Dresses', icon: Shirt, description: 'Elegant dresses for women and children' },
-    { name: 'Swim Trunks', icon: Package, description: 'High-quality swimwear and activewear' },
-  ];
-
-  const certifications = [
-    { name: 'Sedex', description: 'Ethical trade certification' },
-    { name: 'Green Certified', description: 'Environmental compliance' },
-    { name: 'BGMEA', description: 'Bangladesh Garment Manufacturers' },
+    { number: "25+", label: "Years Experience" },
+    { number: "500+", label: "Skilled Workers" },
+    { number: "50+", label: "Countries Served" },
+    { number: "99%", label: "Quality Rating" }
   ];
 
   return (
     <div>
-      {/* Hero Section */}
-      <section 
-        className="relative h-screen flex items-center justify-center bg-gradient-to-r from-black/70 to-black/50"
-        style={{
-          backgroundImage: 'url(https://images.pexels.com/photos/7148448/pexels-photo-7148448.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        <div className="container mx-auto px-4 text-center text-white">
-          <h1 className="font-heading text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            Bangladesh's Eco-Friendly<br />
-            <span className="text-primary">Textile Exporter</span> – Since 2004
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed">
-            Kattali Textile Ltd is a fully compliant manufacturer of woven and knit garments 
-            with global export operations.
-          </p>
-          <Link
-            to="/about"
-            className="inline-flex items-center bg-primary text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-accent transition-colors duration-200 group"
-          >
-            Explore More
-            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </Link>
-        </div>
-      </section>
-
-      {/* Why Choose Us Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="font-heading text-4xl font-bold text-center mb-16 text-gray-900">
-            Why Choose <span className="text-primary">Kattali Textile</span>
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <stat.icon className="w-8 h-8 text-primary" />
-                </div>
-                <h3 className="font-heading text-2xl font-bold text-gray-900 mb-2">{stat.title}</h3>
-                <p className="text-primary font-semibold mb-2">{stat.subtitle}</p>
-                <p className="text-gray-600 text-sm">{stat.description}</p>
-              </div>
-            ))}
-          </div>
-          <div className="text-center">
-            <p className="text-gray-600 flex items-center justify-center space-x-4">
-              <span className="flex items-center">
-                <Award className="w-5 h-5 text-primary mr-2" />
-                Sedex Certified
-              </span>
-              <span className="flex items-center">
-                <Globe className="w-5 h-5 text-primary mr-2" />
-                Green Factory Initiatives
-              </span>
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Products Section */}
+      <Hero />
+      
+      {/* Features Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <h2 className="font-heading text-4xl font-bold text-center mb-16 text-gray-900">
-            Our <span className="text-primary">Products</span>
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            {products.map((product, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
-                  <product.icon className="w-8 h-8 text-primary" />
+          <div className="text-center mb-16">
+            <h2 className="font-heading text-4xl font-bold mb-6 text-gray-900">
+              Why Choose <span className="text-primary">Kattali Textile</span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              With over 25 years of experience, we deliver premium textile solutions 
+              with unmatched quality and reliability.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="text-center p-8 rounded-xl bg-white shadow-lg hover:shadow-xl transition-shadow">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <feature.icon className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="font-heading text-xl font-semibold text-center mb-3 text-gray-900">{product.name}</h3>
-                <p className="text-gray-600 text-center text-sm">{product.description}</p>
+                <h3 className="font-heading text-xl font-bold mb-4 text-gray-900">{feature.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{feature.description}</p>
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="font-heading text-4xl font-bold text-primary mb-2">
+                  {stat.number}
+                </div>
+                <div className="text-gray-600 font-medium">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Products Preview */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="font-heading text-4xl font-bold mb-6 text-gray-900">
+              Our <span className="text-primary">Products</span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              From premium fabrics to finished garments, we offer a comprehensive 
+              range of textile products.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="group cursor-pointer">
+              <div className="relative overflow-hidden rounded-xl mb-6">
+                <img 
+                  src="https://images.pexels.com/photos/7148457/pexels-photo-7148457.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  alt="Cotton Fabrics" 
+                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+              </div>
+              <h3 className="font-heading text-xl font-bold mb-3 text-gray-900">Cotton Fabrics</h3>
+              <p className="text-gray-600 mb-4">Premium cotton fabrics for various applications.</p>
+              <Link to="/products" className="text-primary font-semibold hover:text-accent transition-colors inline-flex items-center">
+                Learn More <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
+            </div>
+
+            <div className="group cursor-pointer">
+              <div className="relative overflow-hidden rounded-xl mb-6">
+                <img 
+                  src="https://images.pexels.com/photos/7148457/pexels-photo-7148457.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  alt="Synthetic Fabrics" 
+                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+              </div>
+              <h3 className="font-heading text-xl font-bold mb-3 text-gray-900">Synthetic Fabrics</h3>
+              <p className="text-gray-600 mb-4">High-performance synthetic materials for modern needs.</p>
+              <Link to="/products" className="text-primary font-semibold hover:text-accent transition-colors inline-flex items-center">
+                Learn More <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
+            </div>
+
+            <div className="group cursor-pointer">
+              <div className="relative overflow-hidden rounded-xl mb-6">
+                <img 
+                  src="https://images.pexels.com/photos/7148457/pexels-photo-7148457.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  alt="Finished Garments" 
+                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+              </div>
+              <h3 className="font-heading text-xl font-bold mb-3 text-gray-900">Finished Garments</h3>
+              <p className="text-gray-600 mb-4">Ready-to-wear garments with superior quality.</p>
+              <Link to="/products" className="text-primary font-semibold hover:text-accent transition-colors inline-flex items-center">
+                Learn More <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+
           <div className="text-center mt-12">
-            <Link
-              to="/products"
-              className="inline-flex items-center bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-accent transition-colors duration-200 group"
+            <Link 
+              to="/products" 
+              className="inline-flex items-center bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-accent transition-colors duration-200 group"
             >
               View All Products
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -116,43 +154,30 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Certifications Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="font-heading text-4xl font-bold text-center mb-16 text-gray-900">
-            Our <span className="text-primary">Certifications</span>
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {certifications.map((cert, index) => (
-              <div key={index} className="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
-                <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Award className="w-10 h-10 text-primary" />
-                </div>
-                <h3 className="font-heading text-xl font-bold mb-3 text-gray-900">{cert.name}</h3>
-                <p className="text-gray-600">{cert.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
-      <section className="py-20 bg-primary">
+      <section className="py-20 bg-primary text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="font-heading text-4xl font-bold text-white mb-6">
-            Ready for Global Apparel Sourcing?
+          <h2 className="font-heading text-4xl font-bold mb-6">
+            Ready to Partner with Us?
           </h2>
-          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Partner with us for premium quality textiles, ethical manufacturing, 
-            and reliable global delivery.
+          <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
+            Get in touch today to discuss your textile needs and discover 
+            how we can help your business grow.
           </p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center bg-white text-primary px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors duration-200 group"
-          >
-            Contact Us Today
-            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              to="/contact" 
+              className="inline-flex items-center bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
+            >
+              Get Quote
+            </Link>
+            <Link 
+              to="/about" 
+              className="inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary transition-colors duration-200"
+            >
+              Learn More
+            </Link>
+          </div>
         </div>
       </section>
     </div>

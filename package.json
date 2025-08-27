@@ -3,6 +3,12 @@
   "version": "1.0.0",
   "description": "KTL static site",
   "scripts": {
-    "build": "node build.js"
+    "start": "node index.js",
+    "build": "cd project && npm run build",
+    "dev": "cd project && npm run dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
   }
 }
