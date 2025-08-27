@@ -50,6 +50,8 @@ header nav a.active {
 .hero {
   /* Use the new hero image for a fresh look */
   background: url('../images/hero2.png') no-repeat center center/cover;
+  
+  
   color: #fff;
   
   padding: 4rem 2rem;
@@ -67,6 +69,7 @@ header nav a.active {
 /* Features section */
 .features {
   display: flex;
+  
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
@@ -117,8 +120,9 @@ footer a {
 }
 form {
   max-width: 600px;
-  margin: 1rem auto;
-}
+  m
+    argin: 1rem auto;
+
 form div {
   margin-bottom: 1rem;
 }
@@ -137,6 +141,7 @@ form textarea {
 }
 form button {
   background: #004E89;
+
   color: #fff;
   border: none;
   padding: 0.5rem 1rem;
@@ -152,6 +157,7 @@ section ul {
   max-width: 600px;
   margin: 0 auto;
   padding-left: 0;
+
 }
 section li {
   margin-bottom: 0.5rem;
@@ -165,3 +171,4 @@ section li {
   margin: 0 auto 2rem;
   border-radius: 8px;
 }
+
