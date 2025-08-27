@@ -1,15 +1,26 @@
 export function rfq() {
   return `
     <section>
-      <h2>Request a Quote</h2>
-      <p>Tell us about your project and we’ll provide pricing and timeline information.</p>
-      <form class="rfq-form">
-        <label>Name:<br><input type="text" name="name" required></label>
-        <label>Email:<br><input type="email" name="email" required></label>
-        <label>Company:<br><input type="text" name="company"></label>
-        <label>Product type:<br><input type="text" name="product"></label>
-        <label>Quantity:<br><input type="number" name="quantity" min="1"></label>
-        <label>Details:<br><textarea name="details" rows="4"></textarea></label>
+      <img src="assets/images/rfq.png" alt="Business partnership" class="page-image">
+      <h2>Request for Quote (RFQ)</h2>
+      <p>Looking to partner with us? Fill out the form below and our commercial team will get back to you.</p>
+      <form id="rfqForm">
+        <div>
+          <label for="company">Company Name:</label>
+          <input type="text" id="company" name="company" required>
+        </div>
+        <div>
+          <label for="contactPerson">Contact Person:</label>
+          <input type="text" id="contactPerson" name="contactPerson" required>
+        </div>
+        <div>
+          <label for="rfqEmail">Email:</label>
+          <input type="email" id="rfqEmail" name="email" required>
+        </div>
+        <div>
+          <label for="details">Product Details / Requirements:</label>
+          <textarea id="details" name="details" rows="4" required></textarea>
+        </div>
         <button type="submit">Submit RFQ</button>
       </form>
     </section>

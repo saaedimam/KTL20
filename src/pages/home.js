@@ -11,11 +11,11 @@ export function home() {
       </div>
       <div class="feature">
         <h3>Sustainable Practices</h3>
-        <p>Our commitment to sustainability ensures eco-friendly production methods and responsible sourcing.</p>
+        <p>Our commitment to sustainability ensures eco‑friendly production methods and responsible sourcing.</p>
       </div>
       <div class="feature">
         <h3>Innovative Designs</h3>
-        <p>We offer cutting-edge designs that reflect the latest trends in the fashion industry.</p>
+        <p>We offer cutting‑edge designs that reflect the latest trends in the fashion industry.</p>
       </div>
     </section>
   `;
