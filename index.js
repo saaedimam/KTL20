@@ -5,36 +5,37 @@ const fs = require('fs');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Serve static files from the project/dist directory after build
-app.use(express.static(path.join(__dirname, 'project', 'dist')));
+// Serve React app static files
+app.use('/project', express.static(path.join(__dirname, 'project', 'dist')));
 
-// API endpoints for dynamic content
-app.get('/api/news', (req, res) => {
-  res.json([
-    {
-      title: "KTL Achieves GOTS Certification",
-      date: "2024-01-15",
-      excerpt: "Our commitment to organic textile standards recognized globally."
-    },
-    {
-      title: "New Manufacturing Facility Opens",
-      date: "2024-01-10",
-      excerpt: "Expanding capacity with state-of-the-art equipment."
-    }
-  ]);
-});
+// Serve static site assets
+app.use(express.static('.'));
+app.use('/assets', express.static('assets'));
+app.use('/scripts', express.static('scripts'));
+app.use('/partials', express.static('partials'));
+app.use('/src', express.static('src'));
+app.use('/styles', express.static('styles'));
 
-app.get('/api/contact', (req, res) => {
-  res.json({
-    email: "info@kattali.com",
-    phone: "+880-2-123456789",
-    address: "Dhaka, Bangladesh"
-  });
-});
-
-// Catch all handler for React Router
+// Route handler
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'project', 'dist', 'index.html'));
+  // Check if requesting React app
+  if (req.path.startsWith('/app') || req.path === '/') {
+    const indexPath = path.join(__dirname, 'project', 'dist', 'index.html');
+    if (fs.existsSync(indexPath)) {
+      res.sendFile(indexPath);
+    } else {
+      res.status(404).send('React app not built. Please run "npm run build" in the project directory.');
+    }
+    return;
+  }
+
+  // For other routes, serve the static site
+  const staticIndex = path.join(__dirname, 'index.html');
+  if (fs.existsSync(staticIndex)) {
+    res.sendFile(staticIndex);
+  } else {
+    res.status(404).send('Page not found');
+  }
 });
 
 app.listen(PORT, '0.0.0.0', () => {
