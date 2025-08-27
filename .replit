@@ -7,3 +7,7 @@ channel = "stable-25_05"
 [deployment]
 run = ["sh", "-c", "node index.js"]
 build = ["sh", "-c", "cd project && npm run build"]
+
+[[ports]]
+localPort = 5000
+externalPort = 80
