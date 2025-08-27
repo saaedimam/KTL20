@@ -108,7 +108,7 @@ const Gallery = () => {
 
   const navigateImage = (direction: 'prev' | 'next') => {
     if (selectedImage === null) return;
-    
+
     const currentImages = filteredImages;
     if (direction === 'prev') {
       setSelectedImage(selectedImage > 0 ? selectedImage - 1 : currentImages.length - 1);
@@ -241,89 +241,6 @@ const Gallery = () => {
           </div>
         </div>
       )}
-    </div>
-  );
-};
-
-export default Gallery;
-import React from 'react';
-import { Camera, Image as ImageIcon } from 'lucide-react';
-
-const Gallery: React.FC = () => {
-  const galleryImages = [
-    {
-      url: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      title: 'Manufacturing Floor',
-      category: 'Production'
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      title: 'Textile Machinery',
-      category: 'Equipment'
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1542272604-787c3835535d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      title: 'Fabric Quality Control',
-      category: 'Quality'
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      title: 'Automated Systems',
-      category: 'Technology'
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      title: 'Textile Products',
-      category: 'Products'
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      title: 'Team Work',
-      category: 'People'
-    }
-  ];
-
-  return (
-    <div>
-      {/* Hero Section */}
-      <section className="relative py-32 bg-gradient-to-r from-primary to-primary-light">
-        <div className="container mx-auto px-4">
-          <div className="text-center text-white">
-            <Camera className="w-16 h-16 mx-auto mb-6 opacity-90" />
-            <h1 className="font-heading text-5xl md:text-6xl font-bold mb-6">
-              Gallery
-            </h1>
-            <p className="text-xl opacity-90 max-w-2xl mx-auto">
-              Explore our facilities, processes, and the people behind our success
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Gallery Grid */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {galleryImages.map((image, index) => (
-              <div key={index} className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
-                <div className="aspect-[4/3] overflow-hidden">
-                  <img
-                    src={image.url}
-                    alt={image.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute bottom-4 left-4 text-white">
-                    <div className="text-sm font-medium opacity-80">{image.category}</div>
-                    <div className="font-bold text-lg">{image.title}</div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
     </div>
   );
 };
