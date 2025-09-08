@@ -62,3 +62,13 @@
 {"level":30,"time":1757365835295,"pid":21648,"hostname":"IoriImasu","msg":"CLI core services initialization completed successfully"}
 {"level":30,"time":1757365835429,"pid":21648,"hostname":"IoriImasu","msg":"Configuration loaded successfully"}
 {"level":30,"time":1757365835546,"pid":21648,"hostname":"IoriImasu","msg":"REPL started successfully, waiting for user input"}
+{"level":30,"time":1757371056019,"pid":21648,"hostname":"IoriImasu","input":"deploy","waitingForConfirmation":false,"msg":"Line handler received input"}
+{"level":30,"time":1757371056025,"pid":21648,"hostname":"IoriImasu","input":"deploy","listener":"DEBUG","msg":"DEBUG: Line event fired"}
+{"level":30,"time":1757371056026,"pid":21648,"hostname":"IoriImasu","msg":"Starting parallel matching for: \"deploy...\""}
+{"level":30,"time":1757371056089,"pid":21648,"hostname":"IoriImasu","logicalTaskName":"sequential_thought_generation","modelFromMapping":"google/gemini-2.5-flash-lite","defaultFromMapping":"google/gemini-2.5-flash-lite","defaultModel":"google/gemini-2.5-flash-preview-05-20","modelToUse":"google/gemini-2.5-flash-lite","msg":"Model selection decision for task"}
+{"level":30,"time":1757371056160,"pid":21648,"hostname":"IoriImasu","msg":"No semantic match found above threshold 0.45. Highest score: 0.246"}
+{"level":30,"time":1757371063205,"pid":21648,"hostname":"IoriImasu","logicalTaskName":"sequential_thought_generation","modelFromMapping":"google/gemini-2.5-flash-lite","defaultFromMapping":"google/gemini-2.5-flash-lite","defaultModel":"google/gemini-2.5-flash-preview-05-20","modelToUse":"google/gemini-2.5-flash-lite","msg":"Model selection decision for task"}
+{"level":30,"time":1757371067847,"pid":21648,"hostname":"IoriImasu","msg":"LLM match: process-request (0.7)"}
+{"level":30,"time":1757371067848,"pid":21648,"hostname":"IoriImasu","msg":"Final recommendation: process-request at 14.0% confidence"}
+{"level":30,"time":1757371067899,"pid":21648,"hostname":"IoriImasu","msg":"getConfirmation called"}
+{"level":30,"time":1757371067902,"pid":21648,"hostname":"IoriImasu","msg":"Waiting for confirmation via existing handler"}
