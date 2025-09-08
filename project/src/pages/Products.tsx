@@ -67,11 +67,9 @@ const Products = () => {
     <div>
       {/* Hero Section */}
       <section 
-        className="relative py-32 bg-gradient-to-r from-black/70 to-black/50 flex items-center"
+        className="relative py-32 bg-gradient-to-r from-black/70 to-black/50 flex items-center bg-cover bg-center"
         style={{
           backgroundImage: 'url(https://images.pexels.com/photos/7148448/pexels-photo-7148448.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
         }}
       >
         <div className="container mx-auto px-4">
