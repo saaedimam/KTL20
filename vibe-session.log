@@ -1,0 +1,64 @@
+{"level":30,"time":1757365755545,"pid":21648,"hostname":"IoriImasu","transportType":"cli","workingDirectory":"H:\\kattali textile ltd\\kattali textile ltd","hasValidConfig":false,"isFirstRun":true,"msg":"CLI first-run detection completed"}
+{"level":30,"time":1757365755583,"pid":21648,"hostname":"IoriImasu","transportType":"cli","workingDirectory":"H:\\kattali textile ltd\\kattali textile ltd","hasValidConfig":false,"isFirstRun":true,"msg":"CLI first-run detection completed"}
+{"level":30,"time":1757365823698,"pid":21648,"hostname":"IoriImasu","userProjectDir":"H:\\kattali textile ltd\\kattali textile ltd","msg":"Configuration saved to user project directory"}
+{"level":30,"time":1757365824087,"pid":21648,"hostname":"IoriImasu","packageRoot":"C:\\Users\\Iori Imasu\\AppData\\Roaming\\npm\\node_modules\\vibe-coder-mcp","msg":"Configuration saved to package directory as fallback"}
+{"level":30,"time":1757365824134,"pid":21648,"hostname":"IoriImasu","savedLocations":["H:\\kattali textile ltd\\kattali textile ltd","C:\\Users\\Iori Imasu\\AppData\\Roaming\\npm\\node_modules\\vibe-coder-mcp"],"transportType":"cli","errorCount":0,"msg":"Configuration saved successfully"}
+{"level":30,"time":1757365827617,"pid":21648,"hostname":"IoriImasu","config":{"maxConcurrentRequests":3,"defaultCacheTTL":1800000,"qualityThresholds":{"minimum":0.4,"good":0.7,"excellent":0.9},"performance":{"enableCaching":true,"enableParallelQueries":true,"maxQueryDepth":3,"timeoutMs":120000},"integration":{"autoEnhanceDecomposition":true,"generateSubQueries":true,"extractActionItems":true,"createKnowledgeBase":true},"enhancement":{"temperature":0.1,"format":"markdown","timeoutComplexity":"moderate"}},"msg":"Research Integration initialized"}
+{"level":30,"time":1757365827696,"pid":21648,"hostname":"IoriImasu","msg":"Grammar files directory: C:\\Users\\Iori Imasu\\AppData\\Roaming\\npm\\node_modules\\vibe-coder-mcp\\build\\tools\\code-map-generator\\grammars"}
+{"level":30,"time":1757365827727,"pid":21648,"hostname":"IoriImasu","msg":"Project root directory: C:\\Users\\Iori Imasu\\AppData\\Roaming\\npm\\node_modules\\vibe-coder-mcp"}
+{"level":30,"time":1757365827750,"pid":21648,"hostname":"IoriImasu","msg":"Current working directory: H:\\kattali textile ltd\\kattali textile ltd"}
+{"level":30,"time":1757365827779,"pid":21648,"hostname":"IoriImasu","msg":"Module directory (__dirname): C:\\Users\\Iori Imasu\\AppData\\Roaming\\npm\\node_modules\\vibe-coder-mcp\\build\\tools\\code-map-generator"}
+{"level":30,"time":1757365827930,"pid":21648,"hostname":"IoriImasu","msg":"Tool \"map-codebase\" registration deferred until ToolRegistry is initialized with proper config."}
+{"level":30,"time":1757365827949,"pid":21648,"hostname":"IoriImasu","msg":"Code-Map Generator tool registered."}
+{"level":30,"time":1757365827966,"pid":21648,"hostname":"IoriImasu","msg":"Job Manager Integration Service initialized (job processor deferred)"}
+{"level":30,"time":1757365827998,"pid":21648,"hostname":"IoriImasu","config":{"method":"weighted","updateIntervalMinutes":5,"enableRealTimeUpdates":true,"enableCompletionEstimation":true,"enableDependencyTracking":true,"enableCriticalPathMonitoring":true,"enableScheduleDeviationAlerts":true,"complexityWeights":{"simple":1,"medium":2,"complex":3,"critical":4},"statusWeights":{"pending":0,"in_progress":0.5,"completed":1,"blocked":0,"failed":0},"deviationThresholdPercentage":20,"criticalPathUpdateInterval":10},"msg":"Progress tracker initialized"}
+{"level":30,"time":1757365828029,"pid":21648,"hostname":"IoriImasu","config":{"enableProgressMapping":true,"enableResourceTracking":true,"progressUpdateThreshold":5,"debounceMs":500},"msg":"ProgressJobBridge initialized"}
+{"level":30,"time":1757365828099,"pid":21648,"hostname":"IoriImasu","msg":"Tool \"register-agent\" registration deferred until ToolRegistry is initialized with proper config."}
+{"level":30,"time":1757365829243,"pid":21648,"hostname":"IoriImasu","msg":"Tool \"get-agent-tasks\" registration deferred until ToolRegistry is initialized with proper config."}
+{"level":30,"time":1757365829259,"pid":21648,"hostname":"IoriImasu","msg":"Tool \"submit-task-response\" registration deferred until ToolRegistry is initialized with proper config."}
+{"level":30,"time":1757365829877,"pid":21648,"hostname":"IoriImasu","msg":"Starting CLI core services initialization"}
+{"level":30,"time":1757365829945,"pid":21648,"hostname":"IoriImasu","configPath":"C:\\Users\\Iori Imasu\\AppData\\Roaming\\npm\\node_modules\\vibe-coder-mcp\\job-timeout-config.json","toolCount":15,"msg":"Loaded job timeout configuration"}
+{"level":30,"time":1757365829948,"pid":21648,"hostname":"IoriImasu","msg":"JobTimeoutConfigManager initialized successfully"}
+{"level":30,"time":1757365829961,"pid":21648,"hostname":"IoriImasu","msg":"Job timeout configuration initialized"}
+{"level":30,"time":1757365829966,"pid":21648,"hostname":"IoriImasu","hasApiKey":true,"baseUrl":"https://openrouter.ai/api/v1","geminiModel":"google/gemini-2.5-flash-preview-05-20","perplexityModel":"perplexity/sonar","mappingCount":55,"hasDefaultGeneration":true,"configPath":"C:\\Users\\Iori Imasu\\AppData\\Roaming\\npm\\node_modules\\vibe-coder-mcp\\llm_config.json","msg":"OpenRouterConfigManager initialized successfully"}
+{"level":30,"time":1757365829981,"pid":21648,"hostname":"IoriImasu","msg":"Loaded OpenRouter configuration"}
+{"level":30,"time":1757365829994,"pid":21648,"hostname":"IoriImasu","msg":"ToolRegistry instance created."}
+{"level":30,"time":1757365829997,"pid":21648,"hostname":"IoriImasu","msg":"ToolRegistry initialized with configuration"}
+{"level":30,"time":1757365829998,"pid":21648,"hostname":"IoriImasu","msg":"Processing 4 pending tool registrations"}
+{"level":30,"time":1757365829999,"pid":21648,"hostname":"IoriImasu","msg":"Registered tool: map-codebase"}
+{"level":30,"time":1757365830000,"pid":21648,"hostname":"IoriImasu","msg":"Registered tool: register-agent"}
+{"level":30,"time":1757365830013,"pid":21648,"hostname":"IoriImasu","msg":"Registered tool: get-agent-tasks"}
+{"level":30,"time":1757365830017,"pid":21648,"hostname":"IoriImasu","msg":"Registered tool: submit-task-response"}
+{"level":30,"time":1757365830028,"pid":21648,"hostname":"IoriImasu","msg":"Successfully registered 4 pending tools"}
+{"level":30,"time":1757365830029,"pid":21648,"hostname":"IoriImasu","msg":"Unified Security Configuration Manager initialized"}
+{"level":30,"time":1757365830031,"pid":21648,"hostname":"IoriImasu","workingDirectory":"H:\\kattali textile ltd\\kattali textile ltd","previouslyInitialized":false,"msg":"Re-initializing UnifiedSecurityConfig for CLI transport"}
+{"level":30,"time":1757365830033,"pid":21648,"hostname":"IoriImasu","autoDetected":"H:\\kattali textile ltd\\kattali textile ltd","transportType":"cli","priorityUsed":"auto-detection","msg":"Using auto-detected project root directory"}
+{"level":40,"time":1757365830046,"pid":21648,"hostname":"IoriImasu","workingDirectory":"H:\\kattali textile ltd\\kattali textile ltd","projectRoot":"C:\\Users\\Iori Imasu\\AppData\\Roaming\\npm\\node_modules\\vibe-coder-mcp","severity":"medium","msg":"⚠️ MEDIUM: Working directory appears to be outside project. Verify path resolution."}
+{"level":30,"time":1757365830061,"pid":21648,"hostname":"IoriImasu","allowedReadDirectory":"H:\\kattali textile ltd","allowedWriteDirectory":"H:\\kattali textile ltd\\kattali textile ltd\\VibeCoderOutput","securityMode":"strict","extractionSource":"MCP client env","msg":"Vibe Task Manager security configuration extracted from MCP client config"}
+{"level":30,"time":1757365830079,"pid":21648,"hostname":"IoriImasu","transport":"cli","originalWriteDir":"H:\\kattali textile ltd\\kattali textile ltd\\VibeCoderOutput","overriddenWriteDir":"H:\\kattali textile ltd\\kattali textile ltd\\VibeCoderOutput","msg":"CLI transport detected - using working directory for writes"}
+{"level":40,"time":1757365830112,"pid":21648,"hostname":"IoriImasu","workingDirectory":"H:\\kattali textile ltd\\kattali textile ltd","projectRoot":"C:\\Users\\Iori Imasu\\AppData\\Roaming\\npm\\node_modules\\vibe-coder-mcp","severity":"medium","msg":"⚠️ MEDIUM: Working directory appears to be outside project. Verify path resolution."}
+{"level":30,"time":1757365830127,"pid":21648,"hostname":"IoriImasu","allowedReadDirectory":"H:\\kattali textile ltd","allowedWriteDirectory":"H:\\kattali textile ltd\\kattali textile ltd\\VibeCoderOutput","securityMode":"strict","extractionSource":"MCP client env","msg":"Vibe Task Manager security configuration extracted from MCP client config"}
+{"level":30,"time":1757365830131,"pid":21648,"hostname":"IoriImasu","allowedReadDirectory":"H:\\kattali textile ltd\\kattali textile ltd","allowedWriteDirectory":"H:\\kattali textile ltd\\kattali textile ltd\\VibeCoderOutput","securityMode":"strict","allowedDirectories":["H:\\kattali textile ltd\\kattali textile ltd","H:\\kattali textile ltd\\kattali textile ltd\\VibeCoderOutput"],"msg":"Unified security configuration initialized from MCP client config"}
+{"level":30,"time":1757365831145,"pid":21648,"hostname":"IoriImasu","msg":"Registered tool: research-manager"}
+{"level":30,"time":1757365831183,"pid":21648,"hostname":"IoriImasu","msg":"Registered tool: rules-generator"}
+{"level":30,"time":1757365831247,"pid":21648,"hostname":"IoriImasu","msg":"Registered tool: prd-generator"}
+{"level":30,"time":1757365831300,"pid":21648,"hostname":"IoriImasu","msg":"Registered tool: user-stories-generator"}
+{"level":30,"time":1757365831343,"pid":21648,"hostname":"IoriImasu","msg":"Registered tool: task-list-generator"}
+{"level":30,"time":1757365831379,"pid":21648,"hostname":"IoriImasu","msg":"Registered tool: fullstack-starter-kit-generator"}
+{"level":30,"time":1757365831415,"pid":21648,"hostname":"IoriImasu","msg":"Attempting to load workflow definitions from: C:\\Users\\Iori Imasu\\AppData\\Roaming\\npm\\node_modules\\vibe-coder-mcp\\workflows.json"}
+{"level":30,"time":1757365831511,"pid":21648,"hostname":"IoriImasu","msg":"Successfully loaded 5 workflow definitions."}
+{"level":30,"time":1757365831531,"pid":21648,"hostname":"IoriImasu","msg":"Registered tool: run-workflow"}
+{"level":30,"time":1757365831569,"pid":21648,"hostname":"IoriImasu","msg":"Registered tool: get-job-result"}
+{"level":30,"time":1757365831596,"pid":21648,"hostname":"IoriImasu","msg":"Registered tool: get-job-result"}
+{"level":30,"time":1757365831627,"pid":21648,"hostname":"IoriImasu","msg":"Registered tool: vibe-task-manager"}
+{"level":30,"time":1757365831678,"pid":21648,"hostname":"IoriImasu","msg":"Registered tool: curate-context"}
+{"level":30,"time":1757365831681,"pid":21648,"hostname":"IoriImasu","msg":"Context Curator tool registered successfully"}
+{"level":30,"time":1757365831749,"pid":21648,"hostname":"IoriImasu","msg":"Registered tool: process-request"}
+{"level":30,"time":1757365831762,"pid":21648,"hostname":"IoriImasu","workingDirectory":"H:\\kattali textile ltd\\kattali textile ltd","autoDetection":"true","msg":"CLI initialized with auto-detection capability"}
+{"level":30,"time":1757365831766,"pid":21648,"hostname":"IoriImasu","msg":"Initializing tool embeddings..."}
+{"level":30,"time":1757365831781,"pid":21648,"hostname":"IoriImasu","msg":"Loading embedding model: Xenova/all-MiniLM-L6-v2"}
+{"level":30,"time":1757365833360,"pid":21648,"hostname":"IoriImasu","msg":"Embedding model Xenova/all-MiniLM-L6-v2 loaded successfully."}
+{"level":30,"time":1757365835293,"pid":21648,"hostname":"IoriImasu","msg":"Tool embedding initialization complete. Processed 15/15 tools."}
+{"level":30,"time":1757365835295,"pid":21648,"hostname":"IoriImasu","msg":"CLI core services initialization completed successfully"}
+{"level":30,"time":1757365835429,"pid":21648,"hostname":"IoriImasu","msg":"Configuration loaded successfully"}
+{"level":30,"time":1757365835546,"pid":21648,"hostname":"IoriImasu","msg":"REPL started successfully, waiting for user input"}

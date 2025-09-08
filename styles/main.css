@@ -174,6 +174,13 @@
   font-weight: 600;
 }
 
+/* Ensure clean separator bullet regardless of file encoding */
+.marquee-content span::after {
+  content: "\2022" !important; /* bullet • */
+  margin-left: 2rem;
+  opacity: 0.7;
+}
+
 .marquee-content span::after {
   content: "•";
   margin-left: 2rem;
@@ -183,6 +190,27 @@
 @keyframes marquee {
   0% { transform: translateX(100%); }
   100% { transform: translateX(-100%); }
+}
+
+/* Utility: fill parent */
+.abs-fill{ position:absolute; inset:0; }
+/* Blob animations */
+.blob{ animation: blob 18s ease-in-out infinite; }
+.blob2{ animation: blob2 22s ease-in-out infinite; }
+@keyframes blob{ 0%{ transform: translate(0,0) scale(1)} 50%{ transform: translate(40px,10px) scale(1.1)} 100%{ transform: translate(0,0) scale(1)} }
+@keyframes blob2{ 0%{ transform: translate(0,0) scale(1)} 50%{ transform: translate(-30px,-20px) scale(.9)} 100%{ transform: translate(0,0) scale(1)} }
+/* Cursor trail */
+.cursor-trail{ position: fixed; left:0; top:0; width:10px; height:10px; margin-left:-5px; margin-top:-5px; border-radius:50%; background: radial-gradient(circle, #2df4ff, transparent 60%); pointer-events:none; filter: blur(2px); mix-blend-mode: screen; will-change: transform; }
+/* Spotlight overlay */
+.spotlight-overlay{ position:fixed; inset:0; pointer-events:none; background: radial-gradient(600px circle at 50% 20%, rgba(255,255,255,.15), transparent 40%); }
+/* Shape overlay */
+.shape-overlay{ position:absolute; inset:0; pointer-events:none; background:
+  radial-gradient(500px 200px at 10% 20%, rgba(255,255,255,.08), transparent),
+  radial-gradient(400px 160px at 90% 60%, rgba(255,255,255,.06), transparent);
+}
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .blob, .blob2, .cursor-trail{ animation: none !important; transform: none !important; }
 }
 
 /* 3D Tilt Cards */

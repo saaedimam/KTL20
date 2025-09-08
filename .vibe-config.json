@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "setupDate": "2025-09-08T21:10:22.272Z",
+  "unified": {
+    "enabled": true,
+    "projectRoot": "H:\\kattali textile ltd\\kattali textile ltd",
+    "autoDetection": "true"
+  },
+  "directories": {
+    "output": "./VibeCoderOutput",
+    "codeMap": ".",
+    "taskManager": "."
+  },
+  "security": {
+    "mode": "strict"
+  },
+  "models": {
+    "gemini": "google/gemini-2.5-flash-preview-05-20",
+    "perplexity": "perplexity/sonar"
+  },
+  "api": {
+    "baseUrl": "https://openrouter.ai/api/v1"
+  }
+}
