@@ -11,3 +11,4 @@ coverage/
 _trash/
 .DS_Store
 
+.vercel
