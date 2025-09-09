@@ -4,3 +4,9 @@ project/dist/
 VibeCoderOutput/
 vibe-session.log
 .env
+
+.next/
+.turbo/
+coverage/
+# _trash is tracked to keep moved files under version control
+.DS_Store

@@ -6,7 +6,6 @@
   - `public/`: static assets bundled by Vite
   - `dist/`: production build output (ignored in Git)
 - `index.js`: Express server serving `project/dist` on port `5000`.
-- `build.js`: Generates `scripts/config.js` from `.env` for client use.
 
 ## Build, Test, and Development Commands
 - Install: `cd project && npm install`.
@@ -14,7 +13,8 @@
 - Lint: `npm run lint` (ESLint per `project/eslint.config.js`).
 - Build: `npm run build` (emits `project/dist`).
 - Serve build: `npm start` (Express serves `project/dist`).
-- Generate client config: `node build.js`.
+  
+Note: Legacy static-site tooling has been removed; use Vite commands.
 
 ## Coding Style & Naming Conventions
 - Indentation: 2 spaces; TypeScript for React code.
@@ -33,4 +33,4 @@
 
 ## Security & Configuration Tips
 - Do not commit secrets. `.env` and logs are ignored.
-- Never embed credentials in client code or `scripts/config.js`.
+- Never embed credentials in client code.

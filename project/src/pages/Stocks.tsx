@@ -224,7 +224,7 @@ const Stocks: React.FC = () => {
                     </tr>
                   </thead>
                   <tbody className="bg-white divide-y divide-gray-200">
-                    {stocks.map((stock, index) => (
+                    {stocks.map((stock) => (
                       <tr key={stock.symbol} className="hover:bg-gray-50 transition-colors duration-200">
                         <td className="px-6 py-4 whitespace-nowrap">
                           <div className="font-bold text-gray-900">{stock.symbol}</div>
