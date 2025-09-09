@@ -8,5 +8,5 @@ vibe-session.log
 .next/
 .turbo/
 coverage/
-_trash/
+# _trash is tracked to keep moved files under version control
 .DS_Store
