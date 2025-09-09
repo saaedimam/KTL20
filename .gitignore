@@ -1,4 +1,4 @@
-node_modules/
+﻿node_modules/
 project/node_modules/
 project/dist/
 VibeCoderOutput/
@@ -8,5 +8,6 @@ vibe-session.log
 .next/
 .turbo/
 coverage/
-# _trash is tracked to keep moved files under version control
+_trash/
 .DS_Store
+
