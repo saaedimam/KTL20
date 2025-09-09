@@ -4,3 +4,9 @@ project/dist/
 VibeCoderOutput/
 vibe-session.log
 .env
+
+.next/
+.turbo/
+coverage/
+_trash/
+.DS_Store
