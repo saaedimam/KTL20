@@ -6,6 +6,7 @@
     "start": "node index.js",
     "build": "cd project && npm run build",
     "dev": "cd project && npm run dev",
+    "lint": "cd project && npm run lint",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
